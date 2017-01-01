@@ -169,10 +169,10 @@ linker_vector_t::iterator LinkerSmallObjectAllocator::find_page_record(void* ptr
   linker_vector_t::iterator it = std::lower_bound(
       page_records_.begin(), page_records_.end(), boundary);
 
-  if (it == page_records_.end() || it->page_addr != addr) {
-    // not found...
-    __libc_fatal("page record for %p was not found (block_size=%zd)", ptr, block_size_);
-  }
+//  if (it == page_records_.end() || it->page_addr != addr) {
+//    // not found...
+//    __libc_fatal("page record for %p was not found (block_size=%zd)", ptr, block_size_);
+//  }
 
   return it;
 }
